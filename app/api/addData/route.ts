@@ -10,7 +10,6 @@ export async function POST(request: NextRequest) {
   // Extract the uploaded file from the FormData
   const file: File | null = data.get("file") as unknown as File;
 
-  // Make sure file exists
   if (!file) {
     return NextResponse.json({ success: false, error: "No file found" });
   }
